@@ -1,0 +1,6 @@
+[submodule "thirdparty/nanovg"]
+	path = thirdparty/nanovg
+	url = git@github.com:memononen/nanovg.git
+[submodule "thirdparty/cimgui"]
+	path = thirdparty/cimgui
+	url = git@github.com:Extrawurst/cimgui.git
