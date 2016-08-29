@@ -1,9 +1,10 @@
 -- This is the best way to just run the game from the command line.
 
 -- Dynamically load libraries.
-terralib.linklibrary("libglfw3.dylib")
-terralib.linklibrary("/System/Library/Frameworks/Cocoa.framework/Cocoa")
+-- terralib.linklibrary("libglfw3.dylib")
+-- terralib.linklibrary("/System/Library/Frameworks/Cocoa.framework/Cocoa")
 terralib.linklibrary("/System/Library/Frameworks/OpenGL.framework/OpenGL")
+terralib.linklibrary("build/macosx64/SDL2.framework/SDL2")
 terralib.linklibrary("build/macosx64/gamedeps.dylib")
 
 -- @TODO: Live looped recorded editing (fuck yeah)
@@ -12,7 +13,7 @@ function run()
   package.loaded.game = nil
   local game = require "game"
   
-  local platform_api = require "glfw3_platform"
+  local platform_api = require "sdl2_platform"
   local platform = generate_platform(true)
 
   local platform_state = platform.init()
